@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './animations.css';
+
+:root {
+  --bg-page: #020917;
+  --bg-card: #0d1526;
+  --bg-raised: #162038;
+  --border: rgba(255, 255, 255, 0.08);
+  --text-primary: #f0f6ff;
+  --text-secondary: #8da4c4;
+  --text-muted: #4a6080;
+}
+
+.light {
+  --bg-page: #f0f4f8;
+  --bg-card: #ffffff;
+  --bg-raised: #f8fafc;
+  --border: rgba(0, 0, 0, 0.08);
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #94a3b8;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-primary);
+}
+
+@layer components {
+  .glass {
+    background: rgba(13, 21, 38, 0.8);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .text-gradient {
+    background: linear-gradient(90deg, #0ea5e9, #00d4ff, #00ff87);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .focus-ring {
+    @apply focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2 focus-visible:ring-offset-dark-950;
+  }
+}
+
+@layer utilities {
+  .gradient-mesh {
+    background: radial-gradient(circle at 20% 20%, rgba(0, 212, 255, 0.2), transparent 35%),
+      radial-gradient(circle at 80% 10%, rgba(0, 255, 135, 0.12), transparent 35%),
+      radial-gradient(circle at 50% 80%, rgba(56, 189, 248, 0.18), transparent 45%),
+      linear-gradient(120deg, #020917, #0d1526 45%, #050c1f);
+    background-size: 200% 200%;
+    animation: gradient-shift 18s ease infinite;
+  }
+}
