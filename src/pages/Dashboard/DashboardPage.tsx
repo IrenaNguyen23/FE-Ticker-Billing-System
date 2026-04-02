@@ -66,7 +66,7 @@ export default function DashboardPage() {
             <div className="flex items-center justify-between">
               <div className="text-sm font-semibold">Recent Trips</div>
               <Link to="/trips" className="text-xs text-brand-400 hover:text-brand-300">
-                View all ->
+                View all -{'>'}
               </Link>
             </div>
             <div className="mt-4 space-y-3">

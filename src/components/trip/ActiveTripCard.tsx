@@ -35,7 +35,7 @@ export function ActiveTripCard({ trip, onCheckout }: ActiveTripCardProps) {
       <div className="relative space-y-4">
         <div className="text-xs uppercase text-brand-400">Currently travelling</div>
         <div className="text-lg font-semibold">
-          {trip.from?.name} -> {trip.to?.name ?? 'In Transit'}
+          {trip.from?.name} -{'>'} {trip.to?.name ?? 'In Transit'}
         </div>
         <div className="text-sm text-white/60">
           Since {formatTime(trip.startedAt)} - Duration {formatted}

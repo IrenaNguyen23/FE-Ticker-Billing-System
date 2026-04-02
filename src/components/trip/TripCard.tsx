@@ -8,7 +8,7 @@ export function TripCard({ trip }: { trip: Trip }) {
     <Card className="flex items-center justify-between gap-4">
       <div>
         <div className="text-sm font-semibold">
-          {trip.from.name} -> {trip.to?.name ?? 'Unknown'}
+          {trip.from.name} -{'>'} {trip.to?.name ?? 'Unknown'}
         </div>
         <div className="text-xs text-white/50">
           {formatTime(trip.startedAt, 'EEE, dd MMM')} - {formatTime(trip.startedAt)}

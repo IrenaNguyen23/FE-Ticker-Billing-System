@@ -10,7 +10,7 @@ export function FloatingCard() {
     >
       <Card className="w-64">
         <div className="text-xs uppercase text-white/40">Last trip</div>
-        <div className="mt-2 text-sm font-semibold">Central Station -> Parkside</div>
+        <div className="mt-2 text-sm font-semibold">Central Station -{'>'} Parkside</div>
         <div className="mt-1 text-xs text-white/50">Fare: 25,000 VND</div>
       </Card>
     </motion.div>

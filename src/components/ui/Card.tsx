@@ -1,5 +1,5 @@
 import type { ReactNode } from 'react'
-import { Tilt } from 'react-parallax-tilt'
+import Tilt from 'react-parallax-tilt'
 import { cn } from '../../lib/utils'
 
 interface CardProps {

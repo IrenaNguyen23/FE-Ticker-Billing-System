@@ -23,7 +23,7 @@ export default function TripDetailPage() {
       <div className="mx-auto max-w-3xl space-y-6">
         <div className="flex items-center justify-between">
           <Link to="/trips" className="text-sm text-white/60 hover:text-white">
-            <- Trip History
+            ← Trip History
           </Link>
           <Badge variant="success">Completed</Badge>
         </div>
